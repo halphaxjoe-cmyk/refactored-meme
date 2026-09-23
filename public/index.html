@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ht">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05060a"><meta name="description" content="JARVIS — Real AI personal assistant">
+<link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/style.css">
+<title>JARVIS — AI Assistant</title>
+</head>
+<body>
+<div class="scanlines"></div>
+<header class="topbar"><div class="brand">JARVIS</div><div id="connection" class="pill">OFFLINE</div><button id="settingsBtn" class="iconBtn" aria-label="Settings">⚙</button></header>
+<main>
+<section class="hero"><div id="orb" class="orb"><div class="ring r1"></div><div class="ring r2"></div><div class="core"></div><div class="orbit-dot"></div></div><div id="status" class="status">DÒMI</div><div id="caption" class="caption">Peze mikwo a oswa di “Hey JARVIS”.</div></section>
+<section class="controls"><button id="micBtn" class="primary">🎙 <span>Pale</span></button><button id="wakeBtn" class="secondary">WAKE: OFF</button></section>
+<section class="panel"><div class="panelHead"><span>CONVERSATION</span><button id="clearBtn" class="tiny">CLEAR</button></div><div id="messages" class="messages"></div></section>
+<section class="quick"><button data-action="camera">📷 Vision</button><button data-action="memory">🧠 Memory</button><button data-action="notes">📝 Notes</button><button data-action="system">💻 System</button></section>
+</main>
+<dialog id="settings"><div class="dialogHead"><b>JARVIS SETTINGS</b><button id="closeSettings" class="tiny">✕</button></div><label>Langue <select id="lang"><option value="ht-HT">Kreyòl</option><option value="fr-FR">Français</option><option value="en-US">English</option></select></label><label>Vwa <select id="voiceSelect"></select></label><label>Vitès <input id="rate" type="range" min=".7" max="1.3" step=".05" value="1"></label><label><input id="autoSpeak" type="checkbox" checked> Pale repons otomatikman</label><label><input id="confirmTools" type="checkbox" checked> Konfime aksyon ekstèn yo</label><div class="settingBtns"><button id="testVoice">Teste vwa</button><button id="installBtn">Enstale App</button></div></dialog>
+<dialog id="cameraDialog"><div class="dialogHead"><b>JARVIS VISION</b><button id="closeCamera" class="tiny">✕</button></div><video id="video" autoplay playsinline></video><canvas id="canvas" hidden></canvas><button id="snap">📸 Pran foto</button><img id="snapshot" alt="Snapshot" hidden><div id="visionText"></div></dialog>
+<div id="toast" class="toast"></div><script src="/app.js" defer></script>
+</body></html>
